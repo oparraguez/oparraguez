@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Clases de HTML</title>
+        <style>
+            h2 {
+                color: rgb(0,134,11);
+            }
+            h3 {
+                color: rgb(0, 68, 255);
+            }
+            body {
+                background-color: skyblue;
+            }
+            #parrafo-id {
+                background-color: coral;
+            }
+            .parrafo-class {
+                background-color: coral;
+            }
+            table tr td {
+                border: 5px solid red;
+            }
+            #fuente {
+                font-family: "Helvetica", sans-serif;
+            }
+            #parrafo-grande {
+                font-size: 2em;
+            }
+            #texto-centrado {
+                line-height: 1.5em;
+                text-align: center;
+            }
+            #parrafo-subrayado {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 align="center" id="clases-de-html">Clases de HTML</h1>
+        <h2>Este es un segundo título</h2>
+        <p>Esto es un párrafo marcado con la etiqueta /p.<br>
+            Para realizar un salto de línea debo escribir /br.<br>
+            Y así esta línea quedará debajo de la anterior.
+        </p>
+        <h2>Enfasis de texto</h2>
+            <p>Para enfatizar el texto podemos usar <strong>negritas</strong> y <em>cursivas</em>,<br>
+                para las <strong>negritas</strong> se encierra el contenido en la etiqueta "strong"<br>
+                para las <em>cursivas</em> se utiliza la etiqueta "em"</p>
+        <h2>Listas</h2>
+        <p>Para crear listas no ordenadas se utiliza la etiqueta "ul"<br>
+            y para las listas ordenadas se utiliza la etiqueta "ol"
+        </p>
+        <h3>Lista no ordenada (ul)</h3>
+        <ul>
+            <li>Primera cosa</li>
+            <li>Segunda cosa</li>
+            <li>Tercera cosa</li>
+        </ul>
+        <h3>Lista ordenada (ol)</h3>
+        <ol>
+            <li>Primera cosa</li>
+            <li>Segunda cosa</li>
+            <li>Tercera cosa</li>
+        </ol>
+        <h2>Imágenes</h2>
+        <p>Para colocar imagenes debemos utilizar la etiqueta "img",<br>
+        posteriormente debemos utilizar el atributo "src" y agregarle el valor mediante el simbolo "=".<br>
+        Podemos agregar una descripción a la imagen por si falla el alojamiento de la misma utilizando el atributo "alt"<br>
+        y podemos modificar su tamaño mediante el atributo "width"</p>
+        <h3>Ejemplo de imágen</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Personal_computer%2C_exploded_4.svg" alt="imagen de un computador y sus partes" width="200">
+        <h2>CSS</h2>
+        <p>El CSS es el lenguaje de programación que nos permite dar el estilo a nuestra página web<br>
+        Para esto debemos utilizar la etiqueta "style" dentro de la cabeza de nuestro código html.<br>
+        Posteriormente utilizaremos selectores para elegir que parte de nuestro código debe ser estilizada.<br>
+        Los selectores van seguido de llaves {} y dentro de esas llaves va el código para cambiar el color u otros aspectos.</p>
+        <h2>Seleccionar por ID</h2>
+        <p id="parrafo-id">Para seleccionar por id, debemos poner "id" dentro de la etiqueta de apertura que queremos seleccionar,<br>
+        y asgnarle un valor con el signo "=", debemos llamar en style al id con el signo "#".</p>
+        <h2>Seleccionar por Clase</h2>
+        <p class="parrafo-class">para seleccionar por clase, debemos poner "class" dentro de la etiqueta de apertura que queremos seleccionar,<br>
+        y asignarle el valor con el signo "=", debemos llamar en style a la clase con el signo ".".</p>
+        <h2>Vínculos en HTML</h2>
+        <p>Para generar vínculos en html debemos utilizar la etiqueta "a",<br>
+        posteriormente dentro de la apertura y cierre de dicha etiqueta escibimos el texto visible en nuestra página<br>
+        y generamos el vínculo dentro de la etiqueta de apertura con el atributo "href=".<br>
+        Si queremos que el enlace se abra en una nueva pestaña debemos agregar antes del "href" el atributo "target="_blank""<br>
+        Ejemplo: <a target="_blank" href="https://es.khanacademy.org/computing/computer-programming/html-css">Aprende html en KhanAcademy</a></p>
+        <h2>Vínculos internos</h2>
+        <p>Para generar vínculos internos debemos poner la etiqueta "a" y colocar dentro de la apertura el atributo href="#...",<br>
+        de esta forma el navegador nos llevará donde el ID que tengamos en el href.<br>
+        Ejemplo:<a href="clases-de-html.html">Vuelve al inicio de la página</a></p>
+        <h2>Tablas</h2>
+        <p>Para crear tablas debemos utilizar la etiqueta "table".<br>
+        Para agregar areas de nombres de columnas debemos utilizar la etiqueta "thead".<br>
+        Para agregar una fila de encabezados debemos utilizar la etiqueta "tr".<br>
+        Para agregar encabezados a las celdas utilizamos la etiqueta "th".<br>
+        Para agregar datos a la tabla debemos utilizar la etiqueta "tbody" bajo el cierre de "thead".<br>
+        Volvemos a agregar filas con la etiqueta "tr"<br>
+        Agregamos datos a las celdas con la etiqueta "td"<br>
+        Ejemplo:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre de la Mascota</th>
+                    <th>Especie</th>
+                    <th>Color</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cirilla</td>
+                    <td>Perro</td>
+                    <td>Blanco</td>
+                </tr>
+                <tr>
+                    <td>Rengar</td>
+                    <td>Gato</td>
+                    <td>Gris</td>
+                </tr>
+                <tr>
+                    <td>Charito</td>
+                    <td>Gato</td>
+                    <td>Blanco y amarillo</td>
+                </tr>
+                <tr>
+                    <td>Patuleca</td>
+                    <td>Gato</td>
+                    <td>Negro con amarillo</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Comentarios</h2>
+        <p>Para escribir un comentario en nuestro código debemos utilizar la etiqueta "!--el texto--"</p>
+        <!--Esto es un comentario en html-->
+        <h2>Mostrar etiquetas como texto</h2>
+        <p>Para mostrar etiquetas como texto debemos utilizar las siguientes entidades de carácteres<br>
+        que reemplazan los signos de "mayor y menor que".<br>
+        & lt (menor que) y & gt (mayor que) sin el espacio<br>
+        Ejemplo: Esta es una etiqueta de párrafo: &ltp&gt&lt/p&gt</p>
+        <h2>Cambiar la fuente</h2>
+        <p id="fuente">Para cambiar la fuente debemos ocupar el atributo "font-family" detro de nuestro style en css.<br>
+        Algunas familias de fuentes genericas son las siguientes: sans-serif, serif, fantasy, monospace y cursive.</p>
+        <h2>Cambiar el tamaño de la fuente</h2>
+        <p id="parrafo-grande">Para cambiar el tamaño de la fuente debemos ocupar el atributo "font-size" dentro de nuestro style en css.<br>
+        Podemos utilizar 2 tipos de atributos por pixel "Xpx" o por equivalencia "Xem".<br>
+        En este caso este párrafo está al doble en comparación con el body</p>
+        <h2>Atajos css</h2>
+        <p>Para poner el párrafo en negritas podemos utilizar "font-weight:bold;".<br>
+        Para poner el párrafo en cursiva podemos utilizar "font-style:italic;</p>
+        <h2>Otras propiedades Css</h2>
+        <p>Para separar las lineas del párrafo, podemos utilizar el atributo "line-height:Xem".<br>
+        Para centrar el texto podemos utilizar el atributo "text-align:center;"</p>
+        <p id="texto-centrado">Ejemplo: Este texto debe estar al centro,<br>
+        y separado en 1.5em.</p>
+        <p id="parrafo-subrayado">Para subrayar un párrafo podemos utilizar la propiedad "text-decoration:underline;".</p>
+    </body>
+
+
+</html>
