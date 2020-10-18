@@ -35,6 +35,46 @@
             #parrafo-subrayado {
                 text-decoration: underline;
             }
+            #span-rojo {
+                color: red;
+            }
+            #div-gris {
+                background: grey;
+            }
+            #div-overflow {
+                background: yellow;
+                width: 50%;
+                height: 100px;
+                overflow: auto;
+            }
+            #galeria {
+                background:rgb(44, 218, 151);
+                width: 50%;
+                border:5px red solid;
+            }
+            .foto {
+                margin:10px 10px 10px 10px;
+                border: 10px ridge red;
+                width: 300px;
+                height: 200px;
+            }
+            #div-muro {
+                background: yellow;
+                width: 400px;
+                height: 200px;
+                overflow: auto;
+            }
+            #imagen-muro {
+                width: 200px;
+                height: 400px;
+                z-index: 1;
+            }
+            #imagen-nino {
+                width: 100px;
+                position: absolute;
+                left: 10px;
+                z-index: 2;
+            }
         </style>
     </head>
     <body>
@@ -133,7 +173,7 @@
             </tbody>
         </table>
         <h2>Comentarios</h2>
-        <p>Para escribir un comentario en nuestro código debemos utilizar la etiqueta "!--el texto--"</p>
+        <p>Para escribir un comentario en nuestro código debemos utilizar la etiqueta &lt!--el texto--&gt</p>
         <!--Esto es un comentario en html-->
         <h2>Mostrar etiquetas como texto</h2>
         <p>Para mostrar etiquetas como texto debemos utilizar las siguientes entidades de carácteres<br>
@@ -156,6 +196,34 @@
         <p id="texto-centrado">Ejemplo: Este texto debe estar al centro,<br>
         y separado en 1.5em.</p>
         <p id="parrafo-subrayado">Para subrayar un párrafo podemos utilizar la propiedad "text-decoration:underline;".</p>
+        <h2>Agrupación de elementos</h2>
+        <p>Para agrupar elementos podemos utilizar la etiqueta &ltspan&gt para agrupar una parte de un elemento.<br>
+        Y para agrupar varios elementos utilizaremos la etiqueta &ltdiv&gt.<br>
+        Ejemplos: palabra <span id="span-rojo">Rojo</span><br></p>
+        <div id="div-gris"><h3>Este título</h3>
+        <p>Y su párrafo tendran un color de fondo distinto.</p></div>
+        <div id="div-overflow"><h2>Crear barras de desplazamiento en un bloque</h2>
+        <p>Para crear barras de desplazamiento en un bloque &ltdiv&gt,<br>
+        debemos conocer como cambiar el tamaño del bloque con la propiedad "width:X%;<br>
+        debemos asignar la altura con la propiedad "height:Xpx;<br>
+        y agregamos la propiedad "overflow:auto;"</p></div>
+        <h2>Modelo de Caja en CSS</h2>
+        <img src="https://www.kasandbox.org/programming-images/misc/boxmodel.png" alt="modelo de caja" width="400">
+        <h2>Ejemplo del Modelo de Caja</h2>
+        <div id="galeria"><h3>Galería de fotos</h3>
+        <img class="foto" src="https://s.france24.com/media/display/cfed0e52-f6d1-11ea-b094-005056bff430/w:1280/p:4x3/venus%20ok.jpg" alt="planeta venus">
+        <img class="foto" src="https://www.elplural.com/uploads/s1/97/62/11/26tb-mars1-videosixteenbyninejumbo1600.jpeg" alt="planeta marte"><br>
+        <img class="foto" src="https://www.meteorologiaenred.com/wp-content/uploads/2018/07/Planeta-J%C3%BApiter.png" alt="planeta jupiter">
+        <img class="foto" src="https://fotografias.lasexta.com/clipping/cmsimages02/2014/05/26/D7178239-F76D-4458-A9B8-3C4959F313BE/58.jpg" alt="planeta saturno">
+        </div>
+        <h2>Posición en CSS</h2>
+        <p>Para posicionar objetos en CSS la propiedad "position:abolute;" o "position:relative;"<br>
+        para ordenar que objeto se posiciona primero utilizaremos la propiedad "z-index:x;"<br>
+        Ejemplo:</p>
+        <div id="div-muro">
+        <img id="imagen-muro" src="https://png.pngtree.com/thumb_back/fw800/back_our/20190617/ourmid/pngtree-promotion-leaflet-wall-brick-background-image_126292.jpg" alt="imagen de un muro">
+        <img id="imagen-nino" src="https://e7.pngegg.com/pngimages/553/863/png-clipart-walk-cycle-animated-film-walking-walking-cycle-animation-fictional-character-cartoon.png" alt="imagen de un niño">
+        </div>
     </body>
 
 
